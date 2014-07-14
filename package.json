@@ -1,6 +1,6 @@
 {
   "name": "sequelize-json-api",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A connect module that adds a JSON API for all defined models to your application.",
   "main": "lib/index.js",
   "scripts": {
