@@ -1,0 +1,24 @@
+{
+  "name": "sequelize-json-api",
+  "version": "0.0.1",
+  "description": "A connect module that adds a JSON API for all defined models to your application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrenoud/sequelize-json-api.git"
+  },
+  "keywords": [
+    "sequelize",
+    "JSON",
+    "API"
+  ],
+  "author": "Weston Renoud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrenoud/sequelize-json-api/issues"
+  },
+  "homepage": "https://github.com/wrenoud/sequelize-json-api"
+}
