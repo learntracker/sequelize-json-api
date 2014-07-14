@@ -23,3 +23,18 @@ app.use('/api', api);
 
 app.listen();
 ```
+
+Exposed Routes
+--------------
+
+Method | Route                        |        |
+-------|------------------------------|-------------------------------------|
+GET    | `/:resource`                 | Returns a [resource collection][2] of `:resources`|
+POST   | `/:resource`                 | Create a new `:resource` and returns [individual resource][1] |
+GET    | `/:resource/:id`             | Returns the [individual resource][1] `:resource/:id` |
+PUT    | `/:resource/:id`             | Updates and returns the [individual resource][1] `:resource/:id` |
+DELETE | `/:resource/:id`             | Deletes `:resource/:id` |
+GET    | `/:resource/:id/:collection` | Returns a [resource collection][2] of `:collection` where associated with `:resource/:id` |
+
+[1]: http://jsonapi.org/format/#document-structure-individual-resource-representations "Individual Resource"
+[2]: http://jsonapi.org/format/#document-structure-resource-collection-representations "Resource Collection"
