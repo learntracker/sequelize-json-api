@@ -24,6 +24,17 @@ app.use('/api', api);
 app.listen();
 ```
 
+Options
+-------
+
+```javascript
+{
+    endpoint: '/api', // the api endpoint, this is used to build resource URLs
+    allowed: [], // a list of models to expose on the api, default so all if none specified
+    allowOrigin: "*" // the value for the Access-Control-Allow-Origin header to support CORS
+}
+```
+
 Exposed Routes
 --------------
 
