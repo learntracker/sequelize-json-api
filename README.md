@@ -1,7 +1,16 @@
 sequelize-json-api
 ==================
 
-An express router module that adds a [JSON API](http://jsonapi.org/) for all defined [Sequelize](http://sequelizejs.com/) models to your application.
+An express router module that adds a JSON api conformant to the  [JSON API](http://jsonapi.org/) spec for all defined [Sequelize](http://sequelizejs.com/) models in your application.
+
+Development Note
+----------------
+
+I specifically started this project to support the [Ember Data](https://github.com/emberjs/data) adapter [ember-json-api](https://github.com/daliwali/ember-json-api) but quickly found it has some limitations. I realized this after implementing partial support for JSON API format.
+
+I switched to developing on the [`restfull`](tree/restfull) branch that supports [Ember Data RESTAdapter](http://emberjs.com/api/data/classes/DS.RESTAdapter.html) format. The future goal will be to merge the branches and support both hypermedia formats. At that point multiple hypermedia formats will be supportable.
+
+Until then I'm pulling only structural improvements from the `restfull` branch into `master` to keep them sufficiently aligned for a future merge.
 
 Usage
 -----
@@ -43,7 +52,7 @@ Method | Route                        |        |
 GET    | `/:resource`                 | Returns a [resource collection][2] of `:resources`|
 POST   | `/:resource`                 | Create a new `:resource` and returns [individual resource][1] |
 GET    | `/:resource/:id`             | Returns the [individual resource][1] `:resource/:id` |
-PUT    | `/:resource/:id`             | Updates and returns the [individual resource][1] `:resource/:id` |
+PUT    | `/:resource/:id`             | (*Pending [issues/6](issues/6)*) Updates and returns the [individual resource][1] `:resource/:id` |
 DELETE | `/:resource/:id`             | Deletes `:resource/:id` |
 GET    | `/:resource/:id/:collection` | Returns a [resource collection][2] of `:collection` where associated with `:resource/:id` |
 
