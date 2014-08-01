@@ -26,6 +26,12 @@ api = api(sequelize,{
   endpoint: '/api', // needed for href calculation
 })
 
+api.use(function(req,res,next){
+	//Do some middleware function
+	next();
+});
+
+api.initialize();
 app.use('/api', api);
 
 app.listen();
