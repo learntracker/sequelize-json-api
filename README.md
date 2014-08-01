@@ -8,9 +8,7 @@ Development Note
 
 I specifically started this project to support the [Ember Data](https://github.com/emberjs/data) adapter [ember-json-api](https://github.com/daliwali/ember-json-api) but quickly found it has some limitations. I realized this after implementing partial support for JSON API format.
 
-I switched to developing on the [`restfull`](tree/restfull) branch that supports [Ember Data RESTAdapter](http://emberjs.com/api/data/classes/DS.RESTAdapter.html) format. The future goal will be to merge the branches and support both hypermedia formats. At that point multiple hypermedia formats will be supportable.
-
-Until then I'm pulling only structural improvements from the `restfull` branch into `master` to keep them sufficiently aligned for a future merge.
+So I now support two transport formats, `json-api` and `ember-restadapter`. The later supports [Ember Data RESTAdapter](http://emberjs.com/api/data/classes/DS.RESTAdapter.html) transport format.
 
 Usage
 -----
@@ -40,7 +38,8 @@ Options
 {
     endpoint: '/api', // the api endpoint, this is used to build resource URLs
     allowed: [], // a list of models to expose on the api, default so all if none specified
-    allowOrigin: "*" // the value for the Access-Control-Allow-Origin header to support CORS
+    allowOrigin: "*", // the value for the Access-Control-Allow-Origin header to support CORS
+    transport: "json-api" // the transport format to use for the api, json-api or ember-restadapter
 }
 ```
 
