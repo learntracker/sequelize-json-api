@@ -45,7 +45,8 @@ Options
     endpoint: '/api', // the api endpoint, this is used to build resource URLs
     allowed: [], // a list of models to expose on the api, default so all if none specified
     allowOrigin: "*", // the value for the Access-Control-Allow-Origin header to support CORS
-    transport: "json-api" // the transport format to use for the api, json-api or ember-restadapter
+    transport: "json-api", // the transport format to use for the api, json-api or ember-restadapter
+    idValidator: function(id){return true;} //a method to validate ids, default is `validator.isInt`
 }
 ```
 
